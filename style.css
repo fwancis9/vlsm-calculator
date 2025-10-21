@@ -1,0 +1,290 @@
+/* VLSM Calculator Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    background: #000000;
+    min-height: 100vh;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1c1c1e;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+header {
+    background: #1c1c1e;
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.input-section {
+    padding: 40px;
+    background: #2c2c2e;
+}
+
+.network-input, .hosts-input {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #3a3a3c;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background: #48484a;
+}
+
+input[type="text"]::placeholder {
+    color: #8e8e93;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #8e8e93;
+    font-size: 0.9rem;
+}
+
+button {
+    background: #e6800e;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #ff9500;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+.results-section {
+    padding: 40px;
+    background: #1c1c1e;
+}
+
+.results-section h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.subnet-card {
+    background: #3a3a3c;
+    border: 1px solid #48484a;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.subnet-card h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #e6800e;
+    padding-bottom: 4px;
+}
+
+.subnet-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 0;
+    border-bottom: 1px solid #3a3a3c;
+    gap: 2px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.ospf-section {
+    border-top: 1px solid #e6800e;
+    margin-top: 4px;
+    padding-top: 6px;
+}
+
+.cli-config {
+    margin-top: 8px;
+    padding: 8px;
+    background: #1a1a1a;
+    border-radius: 6px;
+    border: 1px solid #e6800e;
+}
+
+.cli-header {
+    font-size: 0.8rem;
+    color: #e6800e;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.cli-code {
+    background: #000000;
+    padding: 6px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.cli-code code {
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #00ff00;
+    line-height: 1.4;
+}
+
+.copy-btn {
+    background: #e6800e;
+    color: #ffffff;
+    border: none;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #ff9500;
+    transform: none;
+}
+
+.label {
+    font-weight: 600;
+    color: #8e8e93;
+    flex: 1;
+    font-size: 0.85rem;
+}
+
+.value {
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.value.highlight {
+    background: linear-gradient(135deg, #e6800e, #ff9500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.error-message {
+    background: #d70015;
+    color: #ffffff;
+    padding: 15px;
+    margin: 20px 40px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 30px 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .input-section, .results-section {
+        padding: 30px 20px;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .subnet-card {
+        padding: 8px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    .subnet-card {
+        min-width: unset;
+        padding: 6px;
+    }
+}

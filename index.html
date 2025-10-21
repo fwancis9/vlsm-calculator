@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLSM Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VLSM Calculator</h1>
+            <p>Variable Length Subnet Masking Calculator</p>
+        </header>
+
+        <div class="input-section">
+            <div class="network-input">
+                <label for="network">Network Address:</label>
+                <input type="text" id="network" placeholder="e.g., 15.0.0.0" value="15.0.0.0">
+            </div>
+
+            <div class="hosts-input">
+                <label for="hosts">Host Requirements (comma-separated):</label>
+                <input type="text" id="hosts" placeholder="e.g., 1500, 2000, 500">
+                <small>Enter the number of hosts needed for each subnet</small>
+            </div>
+
+            <button onclick="calculateVLSM()">Calculate VLSM</button>
+        </div>
+
+        <div id="results" class="results-section">
+            <!-- Results will be displayed here -->
+        </div>
+
+        <div id="error" class="error-message" style="display: none;">
+            <!-- Error messages will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
