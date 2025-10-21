@@ -7,8 +7,11 @@ A simple and intuitive web-based Variable Length Subnet Masking (VLSM) calculato
 - **Easy-to-use Interface**: Clean, modern web interface
 - **VLSM Calculations**: Automatically calculates optimal subnet divisions
 - **Comprehensive Results**: Shows network address, broadcast address, first and last usable IPs
+- **OSPF Configuration**: Generates ready-to-use OSPF network statements and wildcard masks
+- **CLI Copy Function**: One-click copy of OSPF commands for router configuration
 - **Multiple Subnets**: Handle multiple host requirements in a single calculation
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Responsive Design**: Works on desktop (4-column), tablet, and mobile devices
+- **URL Parameters**: Persistent data that survives page refresh and enables link sharing
 - **Input Validation**: Validates IP addresses and host requirements
 
 ## How to Use
@@ -35,6 +38,9 @@ Each result includes:
 - Last usable IP address
 - Broadcast address
 - Total available hosts
+- OSPF wildcard mask
+- OSPF network statement
+- Ready-to-paste CLI configuration
 
 ## Technical Details
 
@@ -45,6 +51,18 @@ The calculator uses the following approach:
 3. Determines appropriate subnet masks
 4. Assigns non-overlapping IP ranges
 5. Provides comprehensive subnet information
+
+### OSPF Integration
+For each calculated subnet, the tool automatically generates:
+- **Wildcard Mask**: Inverse of the subnet mask for OSPF configuration
+- **Network Statement**: Complete OSPF network command with proper syntax
+- **CLI Commands**: Ready-to-paste router configuration commands
+
+### Example OSPF Output
+```cisco
+router ospf 1
+network 15.0.0.0 0.7.255.255 area 0.0.0.0
+```
 
 ## About VLSM
 
