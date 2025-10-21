@@ -36,34 +36,6 @@ Each result includes:
 - Broadcast address
 - Total available hosts
 
-## Getting Started
-
-### Option 1: Direct Use
-1. Clone this repository
-2. Open `index.html` in your web browser
-3. Start calculating!
-
-### Option 2: Local Server
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/vlsm-calculator.git
-cd vlsm-calculator
-
-# Serve with Python (optional)
-python -m http.server 8000
-# Then open http://localhost:8000 in your browser
-```
-
-## Files Structure
-
-```
-VLSM/
-├── index.html      # Main HTML file
-├── style.css       # CSS styling
-├── script.js       # JavaScript logic
-└── README.md       # This file
-```
-
 ## Technical Details
 
 ### VLSM Algorithm
@@ -74,26 +46,6 @@ The calculator uses the following approach:
 4. Assigns non-overlapping IP ranges
 5. Provides comprehensive subnet information
 
-### Browser Compatibility
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers
-- No external dependencies required
-
-## Contributing
-
-Feel free to contribute to this project by:
-1. Reporting bugs
-2. Suggesting new features
-3. Submitting pull requests
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## About VLSM
 
 Variable Length Subnet Masking (VLSM) is a technique that allows network administrators to use different subnet mask lengths for different subnets within the same network. This enables more efficient use of IP address space by allocating exactly the number of addresses needed for each subnet.
-
----
-
-**Made with ❤️ for network administrators and students learning subnetting.**
